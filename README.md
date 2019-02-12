@@ -8,4 +8,5 @@ Xposed 应用唤醒，Alarm限制。应用后台活动限制。
 禁止所有用户Wakelocks,Alarm.
 禁止应用broadcast链式唤醒。
 禁止某些服务启动
+禁止国内应用用来自启的jobscheduler
 </pre>
