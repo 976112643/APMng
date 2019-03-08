@@ -1,0 +1,16 @@
+static recv
+	PMS 
+	collectReceiverComponents
+	->queryIntentServices return  List<ResolveInfo>
+		http://androidxref.com/7.1.2_r36/xref/frameworks/base/core/java/android/content/pm/ResolveInfo.java
+		 public String resolvePackageName;
+		public boolean system;
+		getComponentInfo()->public String processName;
+	
+dyn recv
+	AMS
+	mReceiverResolver.queryIntent
+		mReceiverResolver = IntentResolver< BroadcastFilter, BroadcastFilter> /services/core/java/com/android/server/IntentResolver.java
+			return  ArrayList<BroadcastFilter> finalList
+		BroadcastFilter:
+ 				final String packageName;
