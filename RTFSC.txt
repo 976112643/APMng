@@ -6,7 +6,6 @@ static recv
 		 public String resolvePackageName;
 		public boolean system;
 		getComponentInfo()->public String processName;
-	
 dyn recv
 	AMS
 	mReceiverResolver.queryIntent
@@ -14,3 +13,10 @@ dyn recv
 			return  ArrayList<BroadcastFilter> finalList
 		BroadcastFilter:
  				final String packageName;
+
+//TODO provider
+https://www.cnblogs.com/qcloud1001/p/8000194.html
+
+AMS@getContentProviderImpl
+http://androidxref.com/7.1.2_r36/xref/frameworks/base/services/core/java/com/android/server/am/ActivityManagerService.java#10816
+
