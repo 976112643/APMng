@@ -1,3 +1,7 @@
+//collectReceiverComponents
+//mReceiverResolver.queryIntent
+
+
 package org.cpera.apmng;
 
 import de.robv.android.xposed.IXposedHookLoadPackage;
@@ -357,6 +361,7 @@ public class HOOK implements IXposedHookLoadPackage {
         NoJobs(clo);
         FastDoze(clo);
         RecvHook(clo);
+        FreezeTask(clo);
         XposedBridge.hookAllMethods(XposedHelpers.findClass(
                                         "com.android.server.power.PowerManagerService",
         clo), "acquireWakeLockInternal", new XC_MethodHook() {
