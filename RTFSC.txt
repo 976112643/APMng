@@ -1,0 +1,44 @@
+//DONE
+static recv
+	PMS 
+	collectReceiverComponents
+	->queryIntentServices return  List<ResolveInfo>
+		http://androidxref.com/7.1.2_r36/xref/frameworks/base/core/java/android/content/pm/ResolveInfo.java
+		 public String resolvePackageName;
+		public boolean system;
+		getComponentInfo()->public String processName;
+dyn recv
+	AMS
+	mReceiverResolver.queryIntent
+		mReceiverResolver = IntentResolver< BroadcastFilter, BroadcastFilter> /services/core/java/com/android/server/IntentResolver.java
+			return  ArrayList<BroadcastFilter> finalList
+		BroadcastFilter:
+ 				final String packageName;
+
+
+
+//TODO provider
+https://www.cnblogs.com/qcloud1001/p/8000194.html
+
+AMS@getContentProviderImpl
+http://androidxref.com/7.1.2_r36/xref/frameworks/base/services/core/java/com/android/server/am/ActivityManagerService.java#10816
+
+//TODO sensor
+http://androidxref.com/7.1.1_r6/xref/frameworks/base/core/java/android/hardware/SensorManager.java
+
+http://androidxref.com/7.1.1_r6/xref/frameworks/base/core/java/android/hardware/SystemSensorManager.java
+{ android.hardware.SystemSensorManager}
+ registerListenerImpl(SensorEventListener listener, Sensor sensor,
+          int delayUs, Handler handler, int maxBatchReportLatencyUs, int reservedFlags)
+	   requestTriggerSensorImpl(TriggerEventListener listener, Sensor sensor)
+	    registerDynamicSensorCallbackImpl(
+            DynamicSensorCallback callback, Handler handler)
+//TODO service
+//TODO binder
+https://www.androidos.net.cn/android/7.1.1_r28/xref/frameworks/base/core/java/android/os/Binder.java
+linkToDeath
+//TODO rootless SIGSTOP
+https://www.androidos.net.cn/android/7.1.1_r28/xref/frameworks/base/core/java/android/os/Process.java
+sendSignalQuiet
+  interesting startViaZygote
+
